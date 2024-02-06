@@ -1,0 +1,48 @@
+<%-include ('files/top.ejs') %>
+
+
+<div class="container">
+<form method="POST"  action="/addproduit" enctype="multipart/form-data" >
+    <h1 class="text-center" >Add new product</h1>
+<div class="form-group mb-3">
+  <label  class="form-label">Title product :</label>
+  <input type="text" class="form-control" name="title" >
+</div>
+<div class="form-group mb-3">
+  <label class="form-label">Description :</label>
+  <textarea class="form-control" type="text" rows="3" name="description"></textarea>
+</div>
+<div class="form-group mb-3">
+    <label  class="form-label">Nomber of  pieces :</label>
+    <div class="input-group">
+        <input type="number" class="form-control" name="stock" >
+        <span class="input-group-text">Pieces</span>
+    </div>
+</div>
+<div class="form-group mb-3">
+    <label  class="form-label">Prix :</label>
+    <div class="input-group">
+        <input type="number" class="form-control" name="prix" >
+        <span class="input-group-text">TND</span>
+    </div>
+</div>
+<div class="form-group mb-3">
+    <label class="form-label">Image :</label>
+    <input type="file"  class="form-control" name="image">
+</div>
+    <% if (Smessage) {%>
+          <div class="alert alert-success">
+            <%= Smessage %>
+          </div>
+          <% } %>
+          <% if (Emessage) {%>
+            <div class="alert alert-danger">
+              <%= Emessage %>
+            </div>
+  
+            <% } %>
+  <button class="btn btn-primary m-3" style="background-color: #cc0a6e; border-color:#cc0a6e " type="submit">Add product</button>
+</form>
+</div>
+
+<%-include ('files/bottom.ejs') %>

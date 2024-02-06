@@ -1,0 +1,54 @@
+<%-include ('files/top.ejs') %>
+
+
+
+<div class="container my-5">
+    <div class="row ">
+
+        <div class="col m-4">
+               <form method="POST" action="/register">
+                    <div class="row">
+                      <div class="col">
+                        <label for="exampleFormControlInput1">First name</label>
+                        <input type="text" class="form-control" name="firstName" placeholder="First name">
+                      </div>
+                      <div class="col">
+                        <label for="exampleFormControlInput1">Last name</label>
+                        <input type="text" class="form-control" name="lastName" placeholder="Last name">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Email address</label>
+                          <input type="email" class="form-control" name="email"  placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlInput1">Age</label>
+                          <input type="number" class="form-control" name="age"  placeholder="your age" min="13" max="100">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                           <input type="password" class="form-control"  name="password" placeholder="********" minlength="8">
+                    </div>
+
+                    <% if(msg){ %>
+                      <div  class="alert alert-danger" style="color: rgb(203, 15, 15);text-decoration:underline;">
+                         <%= msg %>
+                      </div>
+                    <% } %>
+
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    
+               </form>
+         </div>
+
+         <div class="col">
+
+
+         </div>
+
+         
+     </div>
+</div>
+
+
+<%-include ('files/bottom.ejs') %>

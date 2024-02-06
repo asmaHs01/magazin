@@ -1,0 +1,54 @@
+<%-include ('files/top.ejs') %>
+
+
+<div class="container">
+<form method="POST"  action="/myproduits/update" enctype="multipart/form-data" >
+    <h1 class="text-center" >Update product</h1>
+<div class="form-group mb-3">
+  <label  class="form-label">Title product :</label>
+  <input type="text" class="form-control" name="title" value="<%= produitUpdate.title %>">
+</div>
+<div class="form-group mb-3">
+  <label class="form-label">Description :</label>
+  <textarea class="form-control" type="text" rows="3" name="description"><%= produitUpdate.description %></textarea>
+</div>
+<input type="hidden" name="produitId" value="<%= produitUpdate._id %>">
+<div class="form-group mb-3">
+    <label  class="form-label">Nomber of  pieces :</label>
+    <div class="input-group">
+        <input type="number" class="form-control" name="stock" value="<%= produitUpdate.stock %>">
+        <span class="input-group-text">Pieces</span>
+    </div>
+</div>
+<div class="form-group mb-3">
+    <label  class="form-label">Prix :</label>
+    <div class="input-group">
+        <input type="number" class="form-control" name="prix" value="<%= produitUpdate.prix %>">
+        <span class="input-group-text">TND</span>
+    </div>
+</div>
+ <img src="/upload/<%= produitUpdate.image %>" width="100" height="100"/>
+    <input type="hidden" name="oldImage"  value="<%= produitUpdate.image %>">
+<div class="form-group mb-3">
+    <label class="form-label">Image :</label>
+    <input type="file"  class="form-control mb-1" name="image" >
+   
+</div>
+
+    <% if (Smessage) {%>
+          <div class="alert alert-success">
+            <%= Smessage %>
+          </div>
+    <% } %>
+    <% if (Emessage) {%>
+          <div class="alert alert-danger">
+            <%= Emessage %>
+          </div>
+  
+    <% } %>
+ 
+  <button class="btn btn-primary m-3" style="background-color: #cc0a6e; border-color:#cc0a6e " type="submit">Update product</button>
+</form>
+</div>
+
+<%-include ('files/bottom.ejs') %>

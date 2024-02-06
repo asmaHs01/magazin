@@ -1,0 +1,35 @@
+<%-include ('files/top.ejs') %>
+
+<<div class="jewellery_section">
+         <div id="jewellery_main_slider" class="carousel slide" data-ride="carousel">     
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <h1 class="fashion_taital">Our Product</h1>
+                     <div class="fashion_section_2">   
+                        <div class="row">
+                           <% for(let produit of produits ){ %>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <a href="/produits/<%= produit._id %>"><h4 class="shirt_text"><%= produit.title %></h4></a>
+                                 <p class="price_text"><%= produit.prix %>  <span style="color: #262626;">TND</span></p>
+                                 <a href="/produits/<%= produit._id %>" ><img style="height:300px;" src="upload/<%= produit.image %>" alt=""></a>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div style="color: #262626;"><%= produit.stock %></div>
+                                 </div>
+                              </div>
+                           </div>
+                            <% } %>
+                        </div>                     
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+
+<%-include ('files/bottom.ejs') %>
+

@@ -1,0 +1,22 @@
+<%-include ('files/top.ejs') %>
+
+<div class="container m-5">
+  <div class="row">
+    <div class="col">
+      <img style="background-color: azure;margin: 20px;" src="/upload/<%= produit.image %>" alt="">
+    </div>
+    <div class="col m-5" >
+      <h1 style="color: azure;"> <%= produit.title %> </h1>
+      <p> <%= produit.description %> </p>
+        <p>
+          <strong> Prix : <%= produit.prix %> TND </strong>  
+        </p> 
+      <p> Stock disponible : <%=  produit.stock %> </p>
+    </div>
+  </div>
+</div>
+<br>
+
+
+
+<%-include ('files/bottom.ejs') %>
