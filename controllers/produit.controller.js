@@ -90,7 +90,3 @@ exports.postUpdateProduitController=(req,res,next)=>{
             })
         }
 }
-
-
-
-

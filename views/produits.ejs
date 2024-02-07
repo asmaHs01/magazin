@@ -13,10 +13,10 @@
                               <div class="box_main">
                                  <a href="/produits/<%= produit._id %>"><h4 class="shirt_text"><%= produit.title %></h4></a>
                                  <p class="price_text"><%= produit.prix %>  <span style="color: #262626;">TND</span></p>
-                                 <a href="/produits/<%= produit._id %>" ><img style="height:300px;" src="upload/<%= produit.image %>" alt=""></a>
+                                 <a href="/produits/<%= produit._id %>" ><img style="height:200px;" src="upload/<%= produit.image %>" alt=""></a>
                                  <div class="btn_main">
-                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
-                                    <div style="color: #262626;"><%= produit.stock %></div>
+                                   
+                                    <div style="color: #262626;"><%= produit.stock %> en stock </div>
                                  </div>
                               </div>
                            </div>

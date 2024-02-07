@@ -24,6 +24,9 @@ GuardAuth.isAuth,produitController.postAddProduitController)
 
 
 
+
+
+
 module.exports=router
 
 

@@ -6,7 +6,6 @@ const RouterAuth=require('./routers/auth.route')
 const RouterMyProduits=require('./routers/myproduits.route')
 const routeContact=require('./routers/contact.route')
 const routeAbout=require('./routers/about.route')
-const routePanier=require('./routers/panier.route')
 const session=require('express-session')
 const MongoDbStore=require('connect-mongodb-session')(session)
 const flash=require('connect-flash')
@@ -41,7 +40,6 @@ app.use('/',RouterAuth)
 app.use('/myproduits',RouterMyProduits)
 app.use('/',routeContact)
 app.use('/',routeAbout)
-app.use('/',routePanier)
 
 
 

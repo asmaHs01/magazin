@@ -16,7 +16,7 @@ exports.getHomeProduits=()=>{
     return new Promise((resolve,reject)=>{
 
        mongoose.connect(url,{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
-          return  Produit.find({}).limit(3)
+          return  Produit.find({}).limit(6)
 
    }).then(produits=>{
       mongoose.disconnect()
@@ -148,3 +148,6 @@ exports.postDataProduitModel=(title,description,stock,prix,image,userId)=>{
     })
 
 } 
+
+
+
